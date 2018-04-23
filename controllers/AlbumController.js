@@ -3,7 +3,7 @@ const Album = require('../models/album')
 exports.changeAlbum = function(req, res) {
 	// Adds Valication
 	const name = req.body.field1;
-	// const artist_id = req.body.field2;
+	const artist_id = req.body.field2;
 	const release_date = req.body.field3;
 	req.checkBody('field1', 'name is required').notEmpty();
 	req.checkBody('field2', 'description is required').notEmpty();
@@ -14,9 +14,11 @@ exports.changeAlbum = function(req, res) {
 	if(errors) {
 		res.render('index', { errors })
 	} else {	
+		console.log(artist_id);
+		console.log(typeof(artist_id));
 		const newAlbum = new Album({
 			name,
-			// artist_id,
+			artist_id,
 			release_date,
 		});
 		// Add unique name validation

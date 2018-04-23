@@ -9,13 +9,13 @@ function createTable(data, type){
 	}else if(type=='album'){
 		tbl_htm+='<table class="table table-hover"><thead><tr><th>Name</th><th>Artist</th><th>Release Date</th></tr></thead>';
 		$.each(data, function(index, value){
-			tbl_htm+='<tr><td>'+value.name+'</td><td>'+value.artist+'</td><td>'+value.release_date+'</td></tr>'
+			tbl_htm+='<tr><td>'+value.name+'</td><td>'+value.artist_id+'</td><td>'+value.release_date+'</td></tr>'
 		});
 		return tbl_htm;
 	}else if(type=='track'){
 		tbl_htm+='<table class="table table-hover"><thead><tr><th>Name</th><th>Album</th><th>Play Time</th></tr></thead>';
 		$.each(data, function(index, value){
-			tbl_htm+='<tr><td>'+value.name+'</td><td>'+value.albumm+'</td><td>'+value.play_time+'</td></tr>'
+			tbl_htm+='<tr><td>'+value.name+'</td><td>'+value.album_id+'</td><td>'+value.play_time+'</td></tr>'
 		});
 		return tbl_htm;
 	}

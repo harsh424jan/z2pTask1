@@ -3,7 +3,7 @@ const Track = require('../models/track')
 exports.changeTrack= function(req, res) {
 	// Adds Valication
 	const name = req.body.field1;
-	// const album_id = req.body.field2;
+	const album_id = req.body.field2;
 	const play_time = req.body.field3;
 	req.checkBody('field1', 'name is required').notEmpty();
 	req.checkBody('field2', 'description is required').notEmpty();
@@ -16,7 +16,7 @@ exports.changeTrack= function(req, res) {
 	} else {		
 		const newTrack = new Track({
 			name,
-			// album_id,
+			album_id,
 			play_time,
 		});
 		// Add unique name validation
