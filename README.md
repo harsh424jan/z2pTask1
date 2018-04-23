@@ -12,7 +12,9 @@ The form data is different for each type of collection.
 In Each form, there is a datalist as suggestion for the names of the stored artist,album or track.
 If the name is present in the datalist then, the record corresponding to it will be updated else a new record is created.
 For the albums and tracks form, there is a dropdown list for the artists and albums respectively linked with there ids.
-That's how only ids are stored in the database and the complete names.
+That's how only ids are stored in the database and not the complete names.
+
+For testing purposes, first add some artists, then some albums and then tracks otherwise there will be no options in the dropdown list.
 
 Functionalities remaining: 
 In the playlist view, the album_id and artist_id are shown and not the corresponding name.
